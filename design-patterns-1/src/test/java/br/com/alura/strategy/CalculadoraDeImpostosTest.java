@@ -12,7 +12,8 @@ public class CalculadoraDeImpostosTest {
         CalculadoraDeImpostos calculadora = new CalculadoraDeImpostos();
         Orcamento orcamento = new Orcamento(100.);
 
-        Double valorDoImposto = calculadora.calcular(orcamento, new ICMS());
+        Imposto imposto = new ICMS();
+        Double valorDoImposto = calculadora.calcular(orcamento,imposto);
 
         assertEquals(new Double(10.), valorDoImposto);
     }
